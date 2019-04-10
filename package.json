@@ -1,0 +1,33 @@
+{
+  "name": "hyperapp-styled-components",
+  "version": "0.1.0",
+  "description": "A styled-components for hyperapp (<3kb in size)",
+  "main": "./src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "./src/test.index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilentCicero/hyperapp-styled-components.git"
+  },
+  "keywords": [
+    "styled",
+    "components",
+    "hyperapp",
+    "css",
+    "frontend",
+    "framework"
+  ],
+  "author": "Nick Dodson <thenickdodson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilentCicero/hyperapp-styled-components/issues"
+  },
+  "homepage": "https://github.com/SilentCicero/hyperapp-styled-components#readme",
+  "peerDependencies": {
+    "hyperapp": "^1.2.9"
+  }
+}
