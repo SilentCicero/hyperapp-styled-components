@@ -37,7 +37,7 @@ npm install --save hyperapp-styled-components
 
 ## Usage
 
-First add this to your HTML file `<style type="text/css" id="styles"></style>` than..
+First add this to your HTML file in the <head> tag: `<style type="text/css" id="styles"></style>` than..
 
 ```js
 import { h, app } from "hyperapp";
