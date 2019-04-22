@@ -1,6 +1,6 @@
 {
   "name": "hyperapp-styled-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A styled-components for hyperapp (<3kb in size)",
   "main": "./src/index.js",
   "directories": {

@@ -48,10 +48,11 @@ export function buildName(hash, isKeyframes) {
   return isKeyframes ? `animation-${hash}` : `class-${hash}`;
 }
 
+// new addiiton for replacing end bracket if any with nothing
 function buildClass(className, rawCSS) {
   return rawCSS !== '' ? `
   .${buildName(className)} {
-    ${rawCSS.trim()}
+    ${rawCSS.replace('}', '').trim()}
   }` : '';
 }
 
