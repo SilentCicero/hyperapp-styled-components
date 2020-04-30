@@ -1,28 +1,11 @@
 ## hyperapp-styled-components
 
 <div>
-  <!-- Dependency Status -->
-  <a href="https://david-dm.org/SilentCicero/hyperapp-styled-components">
-    <img src="https://david-dm.org/SilentCicero/hyperapp-styled-components.svg"
-    alt="Dependency Status" />
-  </a>
-
-  <!-- devDependency Status -->
-  <a href="https://david-dm.org/SilentCicero/hyperapp-styled-components#info=devDependencies">
-    <img src="https://david-dm.org/SilentCicero/hyperapp-styled-components/dev-status.svg" alt="devDependency Status" />
-  </a>
-
   <!-- NPM Version -->
   <a href="https://www.npmjs.org/package/hyperapp-styled-components">
     <img src="http://img.shields.io/npm/v/hyperapp-styled-components.svg"
     alt="NPM version" />
   </a>
-
-  <!-- Test Coverage
-  <a href="https://coveralls.io/r/SilentCicero/hyperapp-styled-components">
-    <img src="https://coveralls.io/repos/github/SilentCicero/hyperapp-styled-components/badge.svg" alt="Test Coverage" />
-  </a>
-  -->
 </div>
 
 <br />
@@ -67,24 +50,17 @@ const Wrapper = styled.div`
   }
 `;
 
-const View = () => (state, actions) => (
-  <div>
+app({
+  init: 0,
+  view: state => (
     <Wrapper>
-      <Header />
+      <Header>Welcome to Styled Hyperapp {state ? 'Yay!' : ''}</Header>
 
-      <MyButton color="blue">Heyo!<MyButton>
+      <MyButton onclick={state => 1}>Go</MyButton>
     </Wrapper>
-  </div>
-);
-
-const state = {
-  count: 0,
-};
-
-const actions = {
-};
-
-app(state, actions, View, document.body);
+  ),
+  node: document.getElementById("app")
+});
 ```
 
 ## Features
@@ -145,37 +121,6 @@ const Box = styled.div`
 `;
 
 ```
-
-## Peer Dependency
-
-Note, HyperApp is installed as a peerDependencies within hyperapp-styled-components, which means you must bring your own hyperapp version in your own build.
-
-## Contributing
-
-Please help better the ecosystem by submitting issues and pull requests to `hyperapp-styled-components`.
-
-## Guides
-
-You'll find more detailed information on using `hyperapp-styled-components` and tailoring it to your needs in our guides:
-
-- [User guide](docs/user-guide.md) - Usage, configuration, FAQ and complementary tools.
-- [Developer guide](docs/developer-guide.md) - Contributing to `hyperapp-styled-components` and writing your own code and coverage.
-
-## Help out
-
-There is always a lot of work to do, and will have many rules to maintain. So please help out in any way that you can:
-
-- Create, enhance, and debug SilentCicero rules (see our guide to ["Working on rules"](./github/CONTRIBUTING.md)).
-- Improve documentation.
-- Chime in on any open issue or pull request.
-- Open new issues about your ideas for making `hyperapp-styled-components` better, and pull requests to show us how your idea works.
-- Add new tests to *absolutely anything*.
-- Create or contribute to ecosystem tools, like modules for encoding or contracts.
-- Spread the word.
-
-Please consult our [Code of Conduct](CODE_OF_CONDUCT.md) docs before helping out.
-
-We communicate via [issues](https://github.com/SilentCicero/hyperapp-styled-components/issues) and [pull requests](https://github.com/SilentCicero/hyperapp-styled-components/pulls).
 
 ## Important documents
 

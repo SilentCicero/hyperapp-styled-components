@@ -1,11 +1,8 @@
 {
   "name": "hyperapp-styled-components",
-  "version": "0.1.1",
-  "description": "A styled-components for hyperapp (<3kb in size)",
+  "version": "0.1.2",
+  "description": "A styled-components implementation for hyperapp (<3kb in size)",
   "main": "./src/index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "./src/test.index.js"
   },
@@ -27,7 +24,7 @@
     "url": "https://github.com/SilentCicero/hyperapp-styled-components/issues"
   },
   "homepage": "https://github.com/SilentCicero/hyperapp-styled-components#readme",
-  "peerDependencies": {
-    "hyperapp": "^1.2.9"
+  "dependencies": {
+    "hyperapp": "^2.0.4"
   }
 }

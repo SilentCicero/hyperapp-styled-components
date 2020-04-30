@@ -1,4 +1,4 @@
-const doHash = require('./lib/hash');
+const doHash = require('./hash');
 const { h } = require('hyperapp');
 
 let theme = {};
@@ -48,7 +48,6 @@ export function buildName(hash, isKeyframes) {
   return isKeyframes ? `animation-${hash}` : `class-${hash}`;
 }
 
-// new addiiton for replacing end bracket if any with nothing
 function buildClass(className, rawCSS) {
   return rawCSS !== '' ? `
   .${buildName(className)} {
@@ -197,10 +196,10 @@ function makeElement(tag) {
       children = children[0];
     }
 
-    const className = buildAndRenderCSS(strings, keys, Object.assign({}, { theme }, elProps, specifiedProps));
-
-
-    const newProps = Object.assign(elProps, {}, { class: className });
+    const className = buildAndRenderCSS(strings, keys, Object.assign({}, {
+      theme
+    }, elProps, specifiedProps));
+    const newProps = Object.assign({}, elProps, { class: className });
     delete newProps.children;
 
     return h(tag, newProps, children);
